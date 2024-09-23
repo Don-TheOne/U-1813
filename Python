@@ -1,0 +1,24 @@
+import random
+
+class U1813:
+    def __init__(self):
+        self.alarm_active = False
+        self.air_quality = "Desconhecida"
+        self.assistant_name = "Assistente IA"
+
+    def toggle_alarm(self):
+        self.alarm_active = not self.alarm_active
+        print("Alarme " + ("ativado." if self.alarm_active else "desativado."))
+
+    def check_air_quality(self):
+        self.air_quality = "Boa" if random.random() > 0.5 else "Ruim"
+        print("Qualidade do ar:", self.air_quality)
+
+    def assist(self):
+        print(self.assistant_name + " está aqui para ajudar!")
+
+if __name__ == "__main__":
+    meu_radar = U1813()
+    meu_radar.toggle_alarm()
+    meu_radar.check_air_quality()
+    meu_radar.assist()
