@@ -1,0 +1,33 @@
+public class U1813 {
+    private boolean alarmActive;
+    private String airQuality;
+    private String assistantName;
+
+    public U1813() {
+        this.alarmActive = false;
+        this.airQuality = "Desconhecida";
+        this.assistantName = "Assistente IA";
+    }
+
+    public void toggleAlarm() {
+        alarmActive = !alarmActive;
+        System.out.println("Alarme " + (alarmActive ? "ativado." : "desativado."));
+    }
+
+    public void checkAirQuality() {
+        // Simulação da verificação da qualidade do ar
+        airQuality = Math.random() > 0.5 ? "Boa" : "Ruim";
+        System.out.println("Qualidade do ar: " + airQuality);
+    }
+
+    public void assist() {
+        System.out.println(assistantName + " está aqui para ajudar!");
+    }
+
+    public static void main(String[] args) {
+        U1813 meuRadar = new U1813();
+        meuRadar.toggleAlarm();
+        meuRadar.checkAirQuality();
+        meuRadar.assist();
+    }
+}
